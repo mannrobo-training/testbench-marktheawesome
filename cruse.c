@@ -14,9 +14,11 @@ task main()
 {
 while (1)
     {
-        int i = SencerValue[pot];
-        motor[drive] = i/32;
+        float i = SensorValue[pot];
+        float x = i/4096;
+        motor[drive] = 127/x;
     }
-
+// I turned ther pot val into a decemal (percent) in oreder to make the motor run at the same percent power. 
+// That is the reason for having 2 var, 'i' and 'x', i being the pot val and a being the percent
 
 }

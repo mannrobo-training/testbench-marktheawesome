@@ -16,19 +16,21 @@ task main()
 {
 while(1)
     {
+    	if(SensorValue[bump])
+            {
+                SensorValue[quad] = 0;
+            }
         if(SensorValue[quad]<=1000)
         {
             motor[driveL] = 127;
             motor[driveR] = 127;
-            if(SensorValue[bump])
-            {
-                SensorValue[quad] = 0;
-            }
+
         }
         else
         {
             motor[driveL] = 0;
             motor[driveR] = 0;
+
         }
     }
 

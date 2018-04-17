@@ -25,14 +25,14 @@ while (1)
         }
         else if (.45 < y/127 <= .9)
         {
-            SensorValue[ledyellow] = 1;
+            SensorValue[ledYellow] = 1;
         }
         else if (y/127 > .9)
         {
-            SensorValue[ledgreen] = 1;
+            SensorValue[ledGreen] = 1;
         }
     }
-/* I turned ther pot val into a decemal (percent) in oreder to make the motor run at the same percent power. 
+/* I turned ther pot val into a decemal (percent) in oreder to make the motor run at the same percent power.
  That is the reason for having 2 var, 'i' and 'x', i being the pot val and a being the percent*/
 
 }

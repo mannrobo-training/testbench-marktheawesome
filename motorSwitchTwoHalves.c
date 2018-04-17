@@ -21,7 +21,7 @@ task main()
             motor[driveL] = 127;
             motor[driveR] = 127;
         }
-        if(SensorValue[bump] || SensorValue[limit])
+        else if(SensorValue[bump] || SensorValue[limit])
         {
             motor[driveL] = 127/2;
             motor[driveR] = 127/2;

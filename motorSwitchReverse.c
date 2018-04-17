@@ -16,12 +16,17 @@ task main()
 {
     while(1)
     {
-        if(SensorValue[bump])
+        if(SensorValue[bump] && SensorValue[limit])
+        {
+            motor[driveL] = 0;
+            motor[driveR] = 0;
+        }
+        else if(SensorValue[bump])
         {
             motor[driveL] = 127;
             motor[driveR] = 127;
         }
-        if(SensorValue[limit])
+        else if(SensorValue[limit])
         {
             motor[driveL] = -127;
             motor[driveR] = -127;
